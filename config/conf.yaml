@@ -1,0 +1,7 @@
+BASE:
+  #log级别
+  log_level: "debug"
+  #扩展名
+  log_extension: ".log"
+  test:
+    url: "http://211.103.136.242:8064"
