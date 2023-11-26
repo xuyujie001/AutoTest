@@ -1,0 +1,39 @@
+hero:
+  name: 安其拉
+  word: 火焰是我最喜欢的玩具
+  Hp: 445.5
+
+heros_name:
+  - 安其拉
+  - 黄总
+  - 小乔
+
+heros:
+  - name: huangz
+    word: zhourinsdansid
+    Hp: 440
+
+heros_name_list:
+  - - 安其拉
+  - 黄总
+  - 小乔
+
+mobile_params:
+  shouji: 13585725024
+  appkey: ashdas10ie1-0w-f1
+
+
+user_login_new:
+  - url: /login/
+    method: POST
+    data: {username: 13588239329,password: 1235577}
+    validate:
+      - eq: [$.success, true]
+      - eq: [$.body.token, null]
+
+  - url: /login/
+    method: POST
+    data: {username: 13588239329,password: 1235577}
+    validate:
+      - eq: [$.success, true]
+      - nq: [$.body.token, null]
