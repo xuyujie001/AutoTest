@@ -1,0 +1,15 @@
+#登录用例
+---
+"case_name": "登录成功用例"
+"url": "/authorizations/"
+"data":
+  username: "python"
+  password: "12345678"
+"expect": '"user_id": 1, "username": "python"'
+---
+"case_name": "登录错误用例"
+"url": "/authorizations/"
+"data":
+  username: "python111"
+  password: "12345678111"
+"expect": '"user_id": 111, "username": "python111"'

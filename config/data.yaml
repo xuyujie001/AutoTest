@@ -19,8 +19,8 @@ heros_name_list:
   - 小乔
 
 mobile_params:
-  shouji: 13585725024
-  appkey: ashdas10ie1-0w-f1
+  shouji: "13585725024"
+  appkey: "ashdas10ie1-0w-f1"
 
 
 user_login_new:

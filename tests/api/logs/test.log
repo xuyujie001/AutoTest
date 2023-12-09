@@ -1,0 +1,4 @@
+2023-12-09-11:54:46 - RequestsUtil.py - RequestsUtil - requests_api - 48 - DEBUG - 发送post请求
+2023-12-09-11:54:46 - connectionpool.py - connectionpool - _new_conn - 244 - DEBUG - Starting new HTTP connection (1): 211.103.136.242:8064
+2023-12-09-11:54:49 - RequestsUtil.py - RequestsUtil - requests_api - 48 - DEBUG - 发送post请求
+2023-12-09-11:54:49 - connectionpool.py - connectionpool - _new_conn - 244 - DEBUG - Starting new HTTP connection (1): 211.103.136.242:8064

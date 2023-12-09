@@ -1,0 +1,2 @@
+DEBUG    urllib3.connectionpool:connectionpool.py:1052 Starting new HTTPS connection (1): api.binstd.com:443
+DEBUG    urllib3.connectionpool:connectionpool.py:546 https://api.binstd.com:443 "GET /shouji/query?shouji=shouji&appkey=appkey HTTP/1.1" 200 None

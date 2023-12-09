@@ -1,0 +1,2 @@
+DEBUG    Requests:RequestsUtil.py:48 发送post请求
+DEBUG    urllib3.connectionpool:connectionpool.py:244 Starting new HTTP connection (1): 211.103.136.242:8064

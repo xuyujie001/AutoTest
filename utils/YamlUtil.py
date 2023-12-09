@@ -13,19 +13,19 @@ class YamlReader:
             self.yamlfile= yamlfile
         else:
             raise FileNotFoundError("yaml文件不存在")
-        self.__data = None
-        self.__data_all = None
+        self._data = None
+        self._data_all = None
 
     # 3。yaml读取
     def data(self):#单文档读取
     #第一次调用data，读取yaml文档，如果不是，直接返回之前保存的数据
-        if not self.__data:
+        if not self._data:
             with open(self.yamlfile,"rb") as f:
-                self.__data=yaml.safe_load(f)
-        return self.__data
+                self._data=yaml.safe_load(f)
+        return self._data
     def data_all(self):#多文档读取
     #第一次调用data，读取yaml文档，如果不是，直接返回之前保存的数据
-        if not self.__data_all:
+        if not self._data_all:
             with open(self.yamlfile,"rb") as f:
-                self.__data=yaml.safe_load_all(f)
-        return  self.__data_all
+                self._data_all=list(yaml.safe_load_all(f))
+        return  self._data_all

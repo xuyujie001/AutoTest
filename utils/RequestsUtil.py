@@ -40,20 +40,19 @@ class Request:
 #2、定义公共方法
     def __init__(self):
         self.log=my_log("Requests")
-    def request_api(self,method, url, data=None, json=None, headers=None, cookies=None):
+    def requests_api(self, url, data=None, json=None, headers=None, cookies=None, method="get"):
         if method == "get":
             self.log.debug("发送get请求")
-            r = requests_get(url, headers=headers, json=json, data =data, cookies=cookies)
+            r = requests.get(url,data=data,json=json,headers=headers,cookies=cookies)
         elif method == "post":
             self.log.debug("发送post请求")
-            r = requests_post(url, headers=headers, json=json, data =data, cookies=cookies)
+            r = requests.post(url,data=data,json=json,headers=headers,cookies=cookies)
 
         code=r.status_code
         try:
             body=r.json()
         except Exception as e:
             body=r.text
-
         res = dict()
         res["code"] = code
         res["body"] = body
@@ -62,7 +61,7 @@ class Request:
 #3.重构get/post方法
     #定义方法，定义参数，调用公共方法
     def get(self,url,**kwargs):
-        return  self.request_api(url, method="get", **kwargs)
+        return  self.requests_api(url, method="get", **kwargs)
 
     def post(self,url,**kwargs):
-        return  self.request_api(url, method="post", **kwargs)
+        return  self.requests_api(url, method="post", **kwargs)

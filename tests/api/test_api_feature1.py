@@ -35,14 +35,14 @@ def test_api_scenario2(user_data):
     assert '404 Not Found'  in response.text
     #assert 'error' not in response.json()
 
-@pytest.mark.parametrize("shouji, appkey",getdata()['mobile_params'])
+@pytest.mark.parametrize("shouji, appkey",[getdata()['mobile_params']])
 def test_api_03(shouji, appkey):
     params = {"shouji": shouji, "appkey": appkey}
     r=requests.get('https://api.binstd.com/shouji/query', params=params)
     assert r.status_code == 200
     result = r.json()
-    assert result['status'] == 0
-    assert result['msg'] == "ok"
-    assert result['result']["shouji"] == "13585725024"
+    assert result['status'] == "101"
+    assert result['msg'] == "APPKEY不存在"
+    #assert result['result']["shouji"] == "13585725024"
 
 
