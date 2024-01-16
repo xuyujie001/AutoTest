@@ -8,6 +8,7 @@ from common.Base import init_db
 def test_login():
     url = url_path +"/authorizations/"
     data = {"username": "python","password": "12345678"}
+    
     request =Request()
     r = request.post(url,json=data)
     code = r["code"]
